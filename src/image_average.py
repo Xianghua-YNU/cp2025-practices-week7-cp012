@@ -1,6 +1,6 @@
-import numpy as np
-import scipy.ndimage as sim
-import matplotlib.pyplot as plt
+import numpy as np  # 导入numpy库，用于数值计算
+import scipy.ndimage as sim  # 导入scipy.ndimage库，用于图像处理
+import matplotlib.pyplot as plt  # 导入matplotlib.pyplot库，用于图像显示
 
 def create_small_filter():
     """
@@ -51,8 +51,9 @@ def process_image(input_file):
     # 3. 应用卷积 - 使用scipy.ndimage的convolve()函数
     # convolve()函数执行图像与滤波器的卷积操作
     # mode='reflect'参数处理图像边界，使用镜像反射
-    small_result = sim.convolve(img, small_filter, mode='reflect')
-    large_result = sim.convolve(img, large_filter, mode='reflect')
+    # 这里我们使用默认的mode参数，因为它在大多数情况下工作良好
+    small_result = sim.convolve(img, small_filter)
+    large_result = sim.convolve(img, large_filter)
 
     # 4. 显示结果 - 使用matplotlib绘制对比图
     # 创建一个15英寸宽、5英寸高的画布
@@ -83,4 +84,5 @@ def process_image(input_file):
 if __name__ == "__main__":
     # 主程序入口
     # 确保data/bwCat.tif文件存在
+    # 如果文件不存在，请从Nelson, PMLS Datasets下载并放置在正确的位置
     process_image('data/bwCat.tif')
