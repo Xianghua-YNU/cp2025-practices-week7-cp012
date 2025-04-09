@@ -5,7 +5,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 def load_stress_fibers():
 
-    stressFibers =np.loadtxt('stressFibers.txt')
+    stressFibers =np.loadtxt('data/stressFibers.txt')
     return stressFibers
 
 
