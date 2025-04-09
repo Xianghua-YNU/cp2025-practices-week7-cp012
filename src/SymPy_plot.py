@@ -24,16 +24,13 @@ def problem1():
     返回:
         None (直接显示绘图窗口)
     """
-    # TODO: 定义符号变量 x
-    
-    
-    # TODO: 定义要绘制的表达式
-    #expr =
-    
-    # TODO: 完成绘图函数调用
-    # 提示: 使用 plot() 函数，设置 x 的范围为 -1 到 1
-    # 添加 xlabel, ylabel 和 title 参数
-    pass
+    # 定义符号变量 x
+    x = sp.Symbol('x')
+    # 定义要绘制的表达式
+    expr = sp.cos(sp.tan(sp.pi * x))
+    # 完成绘图函数调用
+    plot(expr, (x, -1, 1), xlabel='x', ylabel='y', title='Plot of cos(tan(pi*x))')
+
 
 def problem2():
     """
@@ -48,18 +45,13 @@ def problem2():
     返回:
         None (直接显示绘图窗口)
     """
-    # TODO: 定义符号变量x,y
-    
-    
-    # TODO: 定义隐函数表达式
-    
-    
-    # TODO: 完成隐函数绘图
-    # 提示: 使用 plot_implicit() 函数
-    # 设置 x 和 y 的合理范围(如 x: -10到10，y: -10到10)
-    # 添加 xlabel, ylabel, title 参数
-    # 设置 points=500 以获得更好的图像质量
-    pass
+   # 定义符号变量x,y
+    x, y = sp.symbols('x,y')
+    # 定义隐函数表达式
+    implicit_expr = sp.exp(y) + sp.cos(x) / x + y
+    # 完成隐函数绘图
+    plot_implicit(implicit_expr, (x, -10, 10), (y, -10, 10), xlabel='x', ylabel='y', title='Plot of e^y + cos(x)/x + y = 0', points=500)
+
 
 def problem3():
     """
@@ -79,17 +71,15 @@ def problem3():
     返回:
         None (直接显示绘图窗口)
     """
-    # TODO: 定义符号变量 s,t
-    
-    
-    # TODO: 定义参数方程
-    
-    
-    # TODO: 完成三维参数曲面绘图
-    # 提示: 使用 plot3d_parametric_surface() 函数
-    # 设置 s 的范围为 0 到 8，t 的范围为 0 到 5*pi
-    # 添加 xlabel, ylabel, zlabel 和 title 参数
-    pass
+   # 定义符号变量 s,t
+    s, t = sp.symbols('s,t')
+    # 定义参数方程
+    x = sp.exp(-s) * sp.cos(t)
+    y = sp.exp(-s) * sp.sin(t)
+    z = t
+    # 完成三维参数曲面绘图
+    plot3d_parametric_surface(x, y, z, (s, 0, 8), (t, 0, 5 * sp.pi), xlabel='x', ylabel='y', zlabel='z', title='3D Parametric Surface Plot')
+
 
 if __name__ == "__main__":
     # 依次运行三个问题的绘图函数
