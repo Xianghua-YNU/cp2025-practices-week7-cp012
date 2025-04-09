@@ -28,14 +28,15 @@
 展示每个任务的结果，可使用表格或图表进行呈现。
 
 ### 任务 1: 读取数据
-展示读取的数据的基本信息（如列名、行数等）。![image](https://github.com/user-attachments/assets/e44eb82f-7433-45b9-9dea-f40020f6bdac)
+展示读取的数据的基本信息（如列名、行数等）。
 
 ### 任务 2: 查看数据基本信息
-粘贴数据的基本信息输出。![image](https://github.com/user-attachments/assets/a7a17dfb-3418-49a9-ae57-21f9abcc6390)
+粘贴数据的基本信息输出。
 
 
 ### 任务 3: 处理缺失值
-说明处理后缺失值的情况。![image](https://github.com/user-attachments/assets/2d8e6fd3-b6c2-4706-886f-6e9b41abf48a)
+说明处理后缺失值的情况。用平均值填补
+![Uploading image.png…]()
 
 
 ### 任务 4: 数据统计分析
