@@ -8,35 +8,59 @@
 
 ### 任务 1: 读取数据
 说明你使用的读取数据的函数和过程。
+return pd.read_csv('data/data.csv')
 
 ### 任务 2: 查看数据基本信息
-描述如何查看数据的基本信息。
+描述如何查看数据的基本信息。   
+    print("数据基本信息：")
+    data.info()
+    print("\n数据的前几行：")
+    print(data.head())
+
 
 ### 任务 3: 处理缺失值
 说明你找出缺失值列和填充缺失值的方法。
+  missing_columns = data.columns[data.isnull().any()].tolist()   
+    for col in missing_columns:
+        if pd.api.types.is_numeric_dtype(data[col]):
+            data[col] = data[col].fillna(data[col].mean())
+    return data
 
 ### 任务 4: 数据统计分析
 说明你计算数值列均值、中位数和标准差的方法。
+    numeric_columns = data.select_dtypes(include=['number']).columns
+    for col in numeric_columns:
+        mean_value = data[col].mean()
+        median_value = data[col].median()
+        std_value = data[col].std()
+        print(f"{col} 列的均值: {mean_value}, 中位数: {median_value}, 标准差: {std_value}")
 
 ### 任务 5: 数据可视化
 描述你选择的数值列和绘制直方图的过程。
+ data[column_name].plot.hist()
+    plt.show()
 
 ### 任务 6: 数据保存
 说明你保存处理后数据的方法。
+    data.to_csv('processed_data.csv', index=False)
+    print("处理后的数据已保存到 processed_data.csv 文件中。")
 
 ## 三、实验结果
 展示每个任务的结果，可使用表格或图表进行呈现。
 
 ### 任务 1: 读取数据
-展示读取的数据的基本信息（如列名、行数等）。
+展示读取的数据的基本信息（如列名、行数等）。![image](https://github.com/user-attachments/assets/c0aa2f99-5690-49af-9348-196911baf641)
+
 
 ### 任务 2: 查看数据基本信息
-粘贴数据的基本信息输出。
+粘贴数据的基本信息输出。![image](https://github.com/user-attachments/assets/c19f9861-f0ac-47c8-95cc-0b238074cf9e)
+
 
 
 ### 任务 3: 处理缺失值
-说明处理后缺失值的情况。用平均值填补
-![Uploading image.png…]()
+说明处理后缺失值的情况。用平均值填补![image](https://github.com/user-attachments/assets/0e14d491-4995-4919-aed2-9410dcb83473)
+
+
 
 
 ### 任务 4: 数据统计分析
@@ -49,6 +73,8 @@
 
 ### 任务 6: 数据保存
 说明保存的文件路径和文件名。![image](https://github.com/user-attachments/assets/864c0155-29f4-4148-8121-8c3d385faed8)
+![image](https://github.com/user-attachments/assets/aa990f3c-513b-4f8b-a3f8-dd591683413c)
+
 
 
 ## 四、总结
