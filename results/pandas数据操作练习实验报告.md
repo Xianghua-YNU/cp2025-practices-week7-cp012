@@ -31,19 +31,24 @@
 展示读取的数据的基本信息（如列名、行数等）。![image](https://github.com/user-attachments/assets/e44eb82f-7433-45b9-9dea-f40020f6bdac)
 
 ### 任务 2: 查看数据基本信息
-粘贴数据的基本信息输出。
+粘贴数据的基本信息输出。![image](https://github.com/user-attachments/assets/a7a17dfb-3418-49a9-ae57-21f9abcc6390)
+
 
 ### 任务 3: 处理缺失值
-说明处理后缺失值的情况。
+说明处理后缺失值的情况。![image](https://github.com/user-attachments/assets/2d8e6fd3-b6c2-4706-886f-6e9b41abf48a)
+
 
 ### 任务 4: 数据统计分析
-列出数值列的均值、中位数和标准差。
+列出数值列的均值、中位数和标准差。![image](https://github.com/user-attachments/assets/f93b8c77-3887-4a9c-9ca9-6cc589ed093b)
+
 
 ### 任务 5: 数据可视化
-插入绘制的直方图。
+插入绘制的直方图。![image](https://github.com/user-attachments/assets/7bf08614-7bf5-4e90-84b0-f7e2dc5c0c21)
+
 
 ### 任务 6: 数据保存
-说明保存的文件路径和文件名。
+说明保存的文件路径和文件名。![image](https://github.com/user-attachments/assets/864c0155-29f4-4148-8121-8c3d385faed8)
+
 
 ## 四、总结
 总结本次实验的收获和体会，分析遇到的问题及解决方法，对 Pandas 数据操作的理解和认识。
